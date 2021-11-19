@@ -1,0 +1,14 @@
+name: Ubuntu CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  gcc8-build:
+    name: GCC8 build
+    runs-on: "ubuntu-20.04"
+    env:
+      hoge: ${{runner.name}}
+    steps:
+      - run: echo $hoge
